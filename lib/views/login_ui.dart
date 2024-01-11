@@ -2,6 +2,7 @@
 
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import "package:my_iot01_app/views/signup_ui.dart";
 import 'package:my_iot01_app/views/home_ui.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -200,7 +201,15 @@ class _loginUIState extends State<loginUI> {
                       style: TextStyle(
                         color: Colors.lightBlue,
                       ),
-                      recognizer: TapGestureRecognizer()..onTap = () {},
+                      recognizer: TapGestureRecognizer()
+                        ..onTap = () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => SignupUI(),
+                            ),
+                          );
+                        },
                     ),
                   ),
                 ],
